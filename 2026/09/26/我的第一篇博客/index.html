@@ -207,7 +207,7 @@
 <p> 一、前期准备<br> 	搭建博客前需要装好两个基础环境：Node.js 和 Git。<br>Node.js 不用强制安装在C盘，可以自定义安装到D盘，但是安装结束一定要确认环境变量生效。我最开始安装完，打开CMD输入 node -v 提示命令不存在，折腾很久才明白：安装程序修改环境变量之后，必须关掉旧的终端窗口重新打开，否则系统读不到新配置。<br>	装好环境，全局安装 Hexo，初始化本地博客文件夹。本地执行  hexo s ，浏览器打开  <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ，看到默认博客页面那一刻，本地博客就跑通了。本地预览一切正常，真正的挑战是部署到 GitHub。</p>
 <p>二、部署到 GitHub：踩坑最多的环节<br> 	GitHub Pages 的原理，就是把静态网页文件推送到特定名称仓库，GitHub 直接帮我们对外提供网页访问。<br>我一开始尝试 SSH 方式部署，生成 SSH 密钥，把公钥粘贴到 GitHub 设置里。执行：</p>
 <p>bash</p>
-<p>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">git@github.com</a>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">git@github.com</a>
  </p>
 <p>直接报错： ssh: connect to host github.com port 22: Connection refused 。</p>
 <p>22端口被限制，没招了，便改用443。<br>配置修改完成，执行</p>
